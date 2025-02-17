@@ -6,7 +6,7 @@ We are using the following dataset for our project:
 - [Blackjack Hands Dataset](https://www.kaggle.com/datasets/dennisho/blackjack-hands)
 
 The dataset is too large to be uploaded to GitHub.  
-You need to download it from the link.
+You need to download it from the link. (50,000,000 test size.)
 
 ## PEAS description
 *   **Performance Measure:**
@@ -32,7 +32,7 @@ You need to download it from the link.
 ## Type of Agent
 This Blackjack AI agent is primarily a **Utility-Based Agent**, the reasons are:
 
-*   **Utility-Based:** The ultimate goal is to maximize the *utility* of the agent, which is measured as long-term winnings (or minimize losses). It aims to choose actions that lead to the highest expected utility. Although the actual "utility" is learned through the probability of win given the action.
+*   **Utility-Based:** The ultimate goal is to maximize the *utility* of the agent, which is measured as long-term winnings (or minimize losses). It aims to choose actions that lead to the highest expected utility. However, the actual "utility" is learned through the probability of winning, given the action.
 *   **Probabilistic Agent:** The agent explicitly reasons about probabilities (the CPTs in the Bayesian Network) to make decisions.
 
 
@@ -86,7 +86,7 @@ The training process for this Blackjack AI agent involves the following steps:
 *   **Limited Generalization:** The model likely has poor generalization performance, especially for rare or unseen combinations of conditions. This is due to the simple learning approach and the lack of smoothing. (This might be the problem we are currently facing.)
 *   **Overfitting Potential:** Without a separate test set, it's impossible to assess whether the model is overfitting the training data.
 
-The first model serves primarily as a proof-of-concept and a starting point, we are still facing some issues with the out-of-context data, and our evaluation part currently has relatively poor performance as lots of the test data are unseen in the training process so that it cannot generate probability dependencies.
+The first model serves primarily as a proof-of-concept and a starting point, we are still facing some issues with the out-of-context data, and our evaluation part currently has relatively poor performance as lots of the test data are unseen in the training process so that it cannot generate probability dependencies. This may also be a result of faulty code or completely unique data.
 
 ### Potential Improvements
 
