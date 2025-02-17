@@ -10,7 +10,7 @@ You need to download it from the link.
 
 ## PEAS description
 *   **Performance Measure:**
-    *   Maximize long-term winnings (or minimize losses) in Blackjack. More specifically, in this simplified version, accurately predict win/loss/push based on observed variables. Also, predict the action with the highest likelihood.
+    *   Maximize long-term winnings (or minimize losses) in Blackjack, predict the action with the highest likelihood.
 *   **Environment:**
     *   Single-player Blackjack game against a dealer.
     *   The "world" consists of:
