@@ -35,6 +35,8 @@ This Blackjack AI agent is primarily a **Utility-Based Agent**, the reasons are:
 *   **Utility-Based:** The ultimate goal is to maximize the *utility* of the agent, which is measured as long-term winnings (or minimize losses). It aims to choose actions that lead to the highest expected utility. However, the actual "utility" is learned through the probability of winning, given the action.
 *   **Probabilistic Agent:** The agent explicitly reasons about probabilities (the CPTs in the Bayesian Network) to make decisions.
 
+## Dataset Exploration
+TBD
 
 ## Probabilistic Modeling and the Agent's Setup
 
@@ -49,8 +51,12 @@ This Blackjack AI agent is primarily a **Utility-Based Agent**, the reasons are:
 
 
 ### Conclusion of the Reinforcement Learning Model
-The average reward is positive (0.0325) means that the agent is making a small profit per hand. This is a good starting point. The agent is winning slightly more than it's losing. Since the starting bet is 1, this means that for every 100 hands, our agent is expected to win 3.25 on top of that one bet (which is a promising start lol).
+TBD
+
+Notes: The average reward is positive (0.0325) means that the agent is making a small profit per hand. This is a good starting point. The agent is winning slightly more than it's losing. Since the starting bet is 1, this means that for every 100 hands, our agent is expected to win 3.25 on top of that one bet (which is a promising start lol).
 
 
 ### Potential Improvements
-May talk about the gpu resource, we need more episodes(iterations) to make the agent stronger. Now it's 100, can be maybe 5000-10000 episodes
+TBD
+
+Notes: May talk about the gpu resource, we need more episodes(iterations) to make the agent stronger. Now it's 100, can be maybe 5000-10000 episodes
