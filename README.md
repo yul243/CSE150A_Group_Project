@@ -49,7 +49,8 @@ This Blackjack AI agent is primarily a **Utility-Based Agent**, the reasons are:
 
 
 ### Conclusion of the Reinforcement Learning Model
-
+The average reward is positive (0.0325) means that the agent is making a small profit per hand. This is a good starting point. The agent is winning slightly more than it's losing. Since the starting bet is 1, this means that for every 100 hands, our agent is expected to win 3.25 on top of that one bet (which is a promising start lol).
 
 
 ### Potential Improvements
+May talk about the gpu resource, we need more episodes(iterations) to make the agent stronger. Now it's 100, can be maybe 5000-10000 episodes
