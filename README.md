@@ -55,6 +55,7 @@ TBD
 * Q-Table Initialization: The agent's "memory" is stored in a Q-table. This table is initialized with zeros. It's a dictionary-like structure that maps each possible state-action pair to an estimated Q-value. We use a defaultdict so we don't have to pre-populate the table.
 
 ## Training the Model
+[Link to our code for training process](https://github.com/yul243/CSE150A_Group_Project/blob/Milestone3/Blackjack_qlearning_agent.ipynb)
 1. Iterate Through Episodes.
 2. Observe the State: For each hand in the training data, the agent observes the current state (player hand, dealer upcard, etc.).
 3. Choose an Action (Epsilon-Greedy): The agent uses an epsilon-greedy policy to choose an action:
@@ -67,6 +68,8 @@ TBD
 ```python
 Q(state, action) = Q(state, action) + alpha * (reward + gamma * max(Q(next_state, all_actions)) - Q(state, action))
 ```
+10. At last we store our Q-table into a pickle file and easier for future use.
+[Link to our pkl file](https://github.com/yul243/CSE150A_Group_Project/blob/Milestone3/blackjack_q_table.pkl)
 
 ## Evaluating the Model
 1. Iterate Through Evaluation Hands: The agent processes a set of blackjack hands.
