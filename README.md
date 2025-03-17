@@ -107,8 +107,6 @@ The key evaluation metrics used to assess the model's performance were:
 * Evaluation Rewards per Hand: The graph shows fluctuations in reward values over multiple hands, confirming the agent's learned policy.
 * Distribution of Rewards: The histogram shows that while most hands result in small profits or losses, there is an overall trend toward profitability.
 
-Notes: The average reward is positive (0.0325), means that the agent is making a small profit per hand. This is a good starting point. The agent is winning slightly more than it's losing. Since the starting bet is 1, this means that for every 100 hands, our agent is expected to win 3.25 on top of that one bet (which is a promising start lol).
-
 
 ### Potential Improvements
 
@@ -126,5 +124,3 @@ While the agent has demonstrated a positive performance, there are several areas
 4. GPU Acceleration & Parallelization:
     * Since Blackjack requires significant computational resources for simulation, leveraging GPU acceleration could significantly speed up training.
     * Implementing batch updates instead of single-step Q-learning updates might improve sample efficiency.
-
-Notes: May talk about the gpu resource, we need more episodes(iterations) to make the agent stronger. Now it's 100, can be maybe 5000-10000 episodes. Moreover, can talk about parameter tuning.
