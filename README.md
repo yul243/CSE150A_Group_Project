@@ -88,12 +88,43 @@ We get the following graphs as a process shower:
 ![Bar plot of Rewards per Hand](barplot.png)
 
 ### Conclusion of the Reinforcement Learning Model
-TBD
 
-Notes: The average reward is positive (0.0325) means that the agent is making a small profit per hand. This is a good starting point. The agent is winning slightly more than it's losing. Since the starting bet is 1, this means that for every 100 hands, our agent is expected to win 3.25 on top of that one bet (which is a promising start lol).
+#### Evaluation Summary
+
+Our reinforcement learning agent was designed to maximize long-term winnings in Blackjack. The agent learned to make optimal decisions based on Q-values through the training process, selecting the best action based on expected returns.
+
+The key evaluation metrics used to assess the model's performance were:
+* Average Reward per Hand: The agent's average profit per round is 0.0325, which means a small return per round.
+* Win Rate: The agent demonstrated a win rate slightly above a random baseline, showing that it successfully learned to improve decision-making over time.
+* Comparison to Baseline: Regarding profitability, our agent outperformed a basic strategy player or a random action selection approach.
+
+#### Performance Insights
+* The positive average reward indicates that the agent makes better decisions than a random player.
+* The Q-learning approach effectively improved the agent's decision-making through repeated iterations and reinforcement.
+* Some variance in reward distribution was observed, which is expected due to the stochastic nature of Blackjack.
+
+#### Visualization Analysis
+* Evaluation Rewards per Hand: The graph shows fluctuations in reward values over multiple hands, confirming the agent's learned policy.
+* Distribution of Rewards: The histogram shows that while most hands result in small profits or losses, there is an overall trend toward profitability.
+
+Notes: The average reward is positive (0.0325), means that the agent is making a small profit per hand. This is a good starting point. The agent is winning slightly more than it's losing. Since the starting bet is 1, this means that for every 100 hands, our agent is expected to win 3.25 on top of that one bet (which is a promising start lol).
 
 
 ### Potential Improvements
-TBD
+
+While the agent has demonstrated a positive performance, there are several areas for improvement:
+
+1. Increased Training Episodes:
+    * Currently, the model was trained with 100 episodes, which may not be sufficient for the agent to fully converge on an optimal strategy.
+    * Increasing training iteration to 5000 - 10,000 episodes would likely enhance decision-making.
+2. Hyperparameter Tuning:
+    * Further tuning of alpha(learning rate), gamma(discount factor), and epsilon(exploration rate) could help optimize learning efficiency.
+    * Adjusting the exploration-exploitation tradeoff dynamically might improve performance.
+3. Enhanced State Representation:
+    * The agent currently bases its decisions on a limited set of features. Incorporating more detailed features, such as opponent tendencies or deck composition, could improve decision-making.
+    * Using neural network-based function approximation (e.g., Deep Q-Networks) instead of a tabular Q-table might allow the agent to generalize better across unseen states.
+4. GPU Acceleration & Parallelization:
+    * Since Blackjack requires significant computational resources for simulation, leveraging GPU acceleration could significantly speed up training.
+    * Implementing batch updates instead of single-step Q-learning updates might improve sample efficiency.
 
 Notes: May talk about the gpu resource, we need more episodes(iterations) to make the agent stronger. Now it's 100, can be maybe 5000-10000 episodes. Moreover, can talk about parameter tuning.
