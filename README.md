@@ -36,7 +36,13 @@ This Blackjack AI agent is primarily a **Utility-Based Agent**, the reasons are:
 *   **Probabilistic Agent:** The agent explicitly reasons about probabilities (different actions) to make decisions. When the agent chooses the action with the highest Q-value, the Q-values themselves represent the agent's belief about the expected return, which is influenced by the probabilities inherent in the environment. The agent might "believe" that standing has a higher expected reward in a particular state, but there's still a chance that hitting could lead to a better outcome due to the random card draw.
 
 ## Dataset Exploration
-TBD
+[Link to EDA notebook](https://github.com/yul243/CSE150A_Group_Project/blob/Milestone3/EDA.ipynb)
+
+![](fig/avg_win_vs._inital_hand.png)
+
+![](fig/output.png)
+
+![](fig/output2.png)
 
 ## Probabilistic Modeling and the Agent's Setup
 * State Definition: We first define what the agent "sees" or "knows" about the game at any given moment. This is the state. In our case, the state consists of:
@@ -84,8 +90,8 @@ We regard the following as the Evaluation Metrics:
 - Comparison to Baseline: Compare the agent's performance to a basic strategy player or a random player.
 
 We get the following graphs as a process shower:
-![Line plot of Rewards per Hand](line_plot.png)
-![Bar plot of Rewards per Hand](barplot.png)
+![Line plot of Rewards per Hand](fig/line_plot.png)
+![Bar plot of Rewards per Hand](fig/barplot.png)
 
 ### Conclusion of the Reinforcement Learning Model
 
