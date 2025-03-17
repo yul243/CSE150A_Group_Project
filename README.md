@@ -36,7 +36,25 @@ This Blackjack AI agent is primarily a **Utility-Based Agent**, the reasons are:
 *   **Probabilistic Agent:** The agent explicitly reasons about probabilities (different actions) to make decisions. When the agent chooses the action with the highest Q-value, the Q-values themselves represent the agent's belief about the expected return, which is influenced by the probabilities inherent in the environment. The agent might "believe" that standing has a higher expected reward in a particular state, but there's still a chance that hitting could lead to a better outcome due to the random card draw.
 
 ## Dataset Exploration
-TBD
+#### Key Variables in the Dataset
+Below are the key variables that play a crucial role in our agent's decision-making process:
+* dealer_up: The dealer's visible card at the start of the hand. This significantly impacts the player's decision.
+* player_final_value: The final value of the player's hand before the outcome is determined.
+*action_taken: The player's action for that hand. Possible values include:
+    * H (Hit): Draw another card.
+    * S (Stand): Keep the current hand.
+    * D (Double Down): Double the bet and take exactly one more card.
+    * P (Split): If the initial two cards are identical, split into two separate hands.
+    * R (Surrender): Forfeit the hand and lose half of the bet.
+    * I (Insurance): Side bet offered when the dealer shows an Ace.
+* outcome: The result of the hand (Win, Loss, or Push).
+* bet_amount: The amount the player wagered for that hand.
+* reward: The net reward for the player after the game.
+#### Relationship Between Variables
+* The dealer_up card strongly influences the player's best possible action.
+* The player_final_value determines whether the hand is likely to win, lose, or push.
+* The action_taken is based on a strategy that considers both dealer_up and player_final_value.
+* The reward is directly dependent on the outcome and the bet amount.
 
 ## Probabilistic Modeling and the Agent's Setup
 * State Definition: We first define what the agent "sees" or "knows" about the game at any given moment. This is the state. In our case, the state consists of:
