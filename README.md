@@ -58,7 +58,7 @@ Below are the key variables that play a crucial role in our agent's decision-mak
 * outcome: The result of the hand (Win, Loss, or Push).
 * bet_amount: The amount the player wagered for that hand.
 * reward: The net reward for the player after the game.
-* 
+
 #### Relationship Between Variables
 * The dealer_up card strongly influences the player's best possible action.
 * The player_final_value determines whether the hand is likely to win, lose, or push.
